@@ -1,38 +1,67 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dashboard {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  height: 100vh;
+}
+
+.sideNav {
+  background-color: #453545;
+  width: 300px;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  padding-left: 30px;
+}
+
+.sideNav > .title {
+  padding: 20px;
+  padding-left: 0;
+  margin: 0;
+}
+
+.sideNav > * {
+  margin-bottom: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.dashboardContent {
+  padding-left: 300px;
+  flex: 1;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.topNav {
+  border-bottom: 2px solid black;
+  padding: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.topNav .avatar {
+  width: 40px;
+  height: 40px;
+  background-color: #453545;
+  border-radius: 50%;
+  margin-right: 10px;
+}
+
+.pages {
+  padding: 20px;
+}
+
+.profile form {
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+}
+
+.profile form > * {
+  margin: 5px 0;
 }

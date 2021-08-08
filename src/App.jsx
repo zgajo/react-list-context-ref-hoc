@@ -6,6 +6,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import { routes } from "./routes";
+import "./App.css";
 
 export default function App() {
   return (
@@ -29,11 +30,13 @@ export default function App() {
           {routes.map((el, index) => {
             return (
               <Route
+                exact
                 key={index}
                 path={el.path}
                 component={(props) => (
                   <>
                     <h1>{el.pathLabel}</h1>
+                    <hr></hr>
                     <el.RouteComponent {...props} />
                   </>
                 )}
