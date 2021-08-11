@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import {
   BrowserRouter as Router,
   Switch,
@@ -6,7 +7,6 @@ import {
   Redirect,
 } from "react-router-dom";
 import { routes } from "./routes";
-import "./App.css";
 
 export default function App() {
   return (
@@ -37,7 +37,9 @@ export default function App() {
                   <>
                     <h1>{el.pathLabel}</h1>
                     <hr></hr>
-                    <el.RouteComponent {...props} />
+                    <Suspense fallback={<div>Loading...</div>}>
+                      <el.RouteComponent {...props} />
+                    </Suspense>
                   </>
                 )}
               />
